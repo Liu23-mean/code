@@ -19,7 +19,7 @@ for (i in 1:1000){
   gf <- gradientForest(data = data,predictor.vars = colnames(data[,c(4:12)]), 
                        response.vars = colnames(data[,c(2:3)]),ntree = 500)
   LNRjs.r2[i] <- gf$result[names(gf$result)=="LNRjs"][1]
-  RESjs.r2[i] <- gf$result[names(gf$result)=="RESjs"][1]
+  LNRPSjs.r2[i] <- gf$result[names(gf$result)=="LNRPSjs"][1]
   a<- importance(gf)[colnames(data)[c(4:12)]]
   wi <- cbind(wi,a)
   print(i)
