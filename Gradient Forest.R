@@ -11,7 +11,7 @@ data <- read.csv("H:/matlab/Japanese sardine/GF/data.csv")
 
 #Random Forest (1000 fittings)
 LNRjs.r2 <- NA 
-RESjs.r2 <- NA 
+LNRPSjs.r2 <- NA 
 wi <- NA #Save weighted importance
 
 for (i in 1:1000){
