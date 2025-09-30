@@ -16,7 +16,7 @@ model1 <- '# regressions
           SSSH2 ~ KEFlat
           CPUEps ~  WSSH + WSST + KCdis + SSST1 + SSST2 + KEFlat
           LNRjs ~  WSSH + WSST + KCdis + SSST1 + SSST2 + KEFlat
-          RESjs ~  WSSH + WSST + KCdis + SSST1 + SSST2 + KEFlat
+          LNRPSjs ~  WSSH + WSST + KCdis + SSST1 + SSST2 + KEFlat
           
           # corr
           KCdis ~~ KEF
@@ -56,7 +56,7 @@ model2 <- '# regressions
           SSSH2 ~ KEFlat
           CPUEps ~  WSSH  +  SSST1  
           LNRjs ~  WSST + SSSH2  
-          RESjs ~  WSST + SSSH2 +KEFlat
+          LNRPSjs ~  WSST +SSSH2
           WSSH  ~  SSSH1
          
           # corr
@@ -66,7 +66,7 @@ model2 <- '# regressions
           SSST1 ~~ SSST2
           SSST2 ~~ SSSH2
           SSSH1 ~~ SSSH2
-          LNRjs ~~ RESjs
+          LNRjs ~~ LNRPSjs
           KCdis ~~ WSST
           '
 #Run the model
